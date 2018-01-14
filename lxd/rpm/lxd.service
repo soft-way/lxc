@@ -1,0 +1,13 @@
+[Unit]
+Description=LXD Container Hypervisor
+Requires=network.service
+
+[Service]
+ExecStart=/usr/bin/lxd --group lxd --logfile=/var/log/lxd/lxd.log
+KillMode=process
+TimeoutStopSec=40
+KillSignal=SIGPWR
+Restart=on-failure
+LimitNOFILE=-1
+LimitNPROC=-1
+

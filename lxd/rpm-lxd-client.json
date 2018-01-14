@@ -1,0 +1,24 @@
+{
+  "name": "lxd-client",
+  "version": "2.21.0",
+  "arch": "amd64",
+  "release": "1",
+  "summary": "lxc",
+  "group": "Applications/Internet",
+  "license": "LICENSE",
+  "url": "https://bintray.com/softway/openstack",
+  "description": "Container hypervisor based on LXC - client",
+  "files": [
+    {
+      "from": "rpm/lxc",
+      "to": "%{_bindir}/",
+      "base": "rpm",
+      "type": ""
+    },
+    {
+      "from": "rpm/lxc.*.gz",
+      "to": "/usr/share/man/man1/",
+      "base": "rpm"
+    }
+  ] 
+}

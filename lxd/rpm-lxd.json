@@ -1,0 +1,40 @@
+{
+  "name": "lxd",
+  "version": "2.21.0",
+  "arch": "amd64",
+  "release": "1",
+  "summary": "Container hypervisor based on LXC - daemon",
+  "group": "Applications/Internet",
+  "license": "LICENSE",
+  "url": "https://bintray.com/softway/openstack",
+  "description": "Container hypervisor based on LXC - daemon",
+  "files": [
+    {
+      "from": "rpm/lxd",
+      "to": "%{_bindir}/",
+      "base": "rpm",
+      "type": ""
+    },
+    {
+      "from": "rpm/lxd.service",
+      "to": "%{_unitdir}/",
+      "base": "rpm"
+    },
+    {
+      "from": "rpm/lxd.*.gz",
+      "to": "/usr/share/man/man1/",
+      "base": "rpm"
+    },
+    {
+      "from": "rpm/etc/logrotate.d/lxd",
+      "to": "/",
+      "base": "rpm"
+    }
+ 
+  ],
+  "preinst": "rpm/preinst.sh",
+  "postinst": "rpm/postinst.sh",
+  "prerm": "rpm/prerm.sh",
+  "postrm": "rpm/postrm.sh",
+  "verify": "rpm/verify.sh"
+}

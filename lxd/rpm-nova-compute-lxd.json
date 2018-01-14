@@ -1,0 +1,19 @@
+{
+  "name": "nova-compute-lxd",
+  "version": "16.0.0",
+  "arch": "amd64",
+  "release": "1",
+  "summary": "nova compute lxd",
+  "group": "Applications/Internet",
+  "license": "LICENSE",
+  "url": "https://bintray.com/softway/openstack",
+  "description": "Openstack Compute - LXD container hypervisor support",
+  "files": [
+    {
+      "from": "rpm/lxd.filters",
+      "to": "/etc/nova/rootwrap.d",
+      "base": "rpm",
+      "type": ""
+    }
+  ] 
+}
